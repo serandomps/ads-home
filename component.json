@@ -1,0 +1,17 @@
+{
+    "name": "advertising-home",
+    "description": "advertising-home component",
+    "local": [],
+    "scripts": ["index.js"],
+    "styles": ["styles.css"],
+    "templates": ["template.html"],
+    "main": "index.js",
+    "images": [
+        "images/*"
+    ],
+    "dependencies": {
+        "serandomps/dust": "master",
+        "serandomps/serand": "master",
+        "serandomps/utils": "master"
+    }
+}
