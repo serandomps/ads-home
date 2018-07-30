@@ -4,13 +4,13 @@ var utils = require('utils');
 
 dust.loadSource(dust.compile(require('./template'), 'advertising-home'));
 
-module.exports = function (sandbox, fn, options) {
+module.exports = function (sandbox, options, done) {
     dust.render('advertising-home', {}, function (err, out) {
         if (err) {
-            return;
+            return done(err);
         }
         sandbox.append(out);
-        fn(false, function () {
+        done(null, function () {
             $('.advertising-home', sandbox).remove();
         });
     });
